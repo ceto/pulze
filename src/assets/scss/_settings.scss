@@ -46,7 +46,7 @@
 // ---------
 
 $global-font-size: 100%;
-$global-width: rem-calc(1200);
+$global-width: rem-calc(1536);
 $global-lineheight: 1.5;
 $foundation-palette: (
   primary: #25A7E0,
@@ -85,7 +85,7 @@ $breakpoints: (
   xlarge: 1200px,
   xxlarge: 1440px,
 );
-$breakpoint-classes: (small medium large);
+$breakpoint-classes: (small medium large xlarge xxlarge);
 
 // 3. The Grid
 // -----------
@@ -95,6 +95,8 @@ $grid-column-count: 12;
 $grid-column-gutter: (
   small: 20px,
   medium: 30px,
+  xlarge: 40px,
+  xxlarge: 60px
 );
 $grid-column-align-edge: true;
 $block-grid-max: 8;
@@ -334,7 +336,7 @@ $input-prefix-color: $black;
 $input-prefix-background: $light-gray;
 $input-prefix-border: 1px solid $medium-gray;
 $input-prefix-padding: 1rem;
-$form-label-color: $black;
+$form-label-color: $light-gray;
 $form-label-font-size: rem-calc(14);
 $form-label-font-weight: $global-weight-normal;
 $form-label-line-height: 1.8;
@@ -346,12 +348,12 @@ $input-placeholder-color: $light-gray;
 $input-font-family: inherit;
 $input-font-size: rem-calc(16);
 $input-background: $medium-gray;
-$input-background-focus: $primary-color;
+$input-background-focus: $light-gray;
 $input-background-disabled: $light-gray;
 $input-border: 1px solid $medium-gray;
-$input-border-focus: 1px solid $primary-color;
+$input-border-focus: 1px solid $light-gray;
 $input-shadow: inset 0 1px 2px rgba($black, 0.1);
-$input-shadow-focus: 0 0 5px $medium-gray;
+$input-shadow-focus: inset 0 1px 5px rgba($black, 0.5);
 $input-cursor-disabled: default;
 $input-transition: box-shadow 0.5s, border-color 0.25s ease-in-out;
 $input-number-spinners: true;
@@ -378,7 +380,7 @@ $mediaobject-image-width-stacked: 100%;
 
 $menu-margin: 0;
 $menu-margin-nested: 1rem;
-$menu-item-padding: 1.5rem 1.25rem 1.5rem;
+$menu-item-padding: 1.5rem 1.25rem 1.333rem;
 $menu-item-color-active: $white;
 $menu-item-background-active: map-get($foundation-palette, primary);
 $menu-icon-spacing: 0.25rem;

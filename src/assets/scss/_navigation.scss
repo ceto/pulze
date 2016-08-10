@@ -2,7 +2,7 @@
   text-transform: uppercase;
   //border-bottom: 1px solid $medium-gray;
   .button {
-    margin-top: .875rem;
+    margin-top: .7rem;
     margin-left: .875rem;
 
     text-transform: uppercase;
@@ -10,15 +10,37 @@
     font-weight: $global-weight-normal;
     &:hover {
       color:$white;
+      //background-color: map-get($foundation-palette,'success')
     }
+  }
+  @include breakpoint(medium) {
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+}
+
+.topbarfeat.top-bar-right {
+  width:auto;
+  //min-width: 10rem;
+  .menu {
+    float:right;
+  }
+}
+.menutoggler {
+  float:left;
+  display: inline-block;
+  margin: 1rem 0 0;
+  @include breakpoint('large') {
+    display: none;
   }
 }
 .sitelogo {
-  display: block;
+  display: inline-block;
   overflow: hidden;
 
   width: 7.5rem;
-  height: 4rem;
+  height: 3rem;
+  margin-top: .4rem;
 
   white-space: nowrap;
   text-indent: 100%;
