@@ -20,6 +20,8 @@
   margin:0 0 .666em;
   line-height: 1;
   font-weight: 300;
+  letter-spacing: 0;
+  text-transform: none;
   &:after {
     content: '';
     display: block;
@@ -31,6 +33,7 @@
 }
 
 .hero__subtitle {
+  letter-spacing: 0;
   line-height: 1;
   margin:0;
   text-transform: uppercase;

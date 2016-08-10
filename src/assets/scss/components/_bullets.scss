@@ -1,0 +1,24 @@
+.bullet {
+  margin: 2rem 0;
+
+  @include clearfix();
+  img {
+    float: left;
+
+    max-width: 19%;
+    margin-right: 4%;
+    //margin-bottom: 5rem;
+  }
+  p {
+    font-size: .875rem;
+
+    @include breakpoint(large) {
+      margin-left: 23%;
+    }
+  }
+}
+.bullet__title {
+  @include breakpoint(large) {
+    margin-left: 23%;
+  }
+}

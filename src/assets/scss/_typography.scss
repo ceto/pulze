@@ -1,0 +1,38 @@
+h1, h2, h3, h4, h5, h6 {
+  letter-spacing: .0666em;
+  text-transform: uppercase;
+}
+.smalltitle {
+  font-size: 1.25rem;
+  text-align: center;
+  margin:0 0;
+  text-transform: none;
+}
+
+.ps__title {
+  text-align: center;
+  margin:0 0;
+}
+
+.withlinea {
+  margin-bottom: 2.333em;
+
+  &:after {
+    content: '';
+    display: block;
+    margin:2rem auto 0;
+    height:2px;
+    width: 6em;
+    background-color: $primary-color;
+  }
+
+}
+
+
+
+.pricol {
+  color:$primary-color;
+}
+.seccol {
+  color:$secondary-color;
+}

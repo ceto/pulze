@@ -103,7 +103,7 @@ $block-grid-max: 8;
 // ------------------
 
 $header-font-family: 'Lato', sans-serif;
-$header-font-weight: $global-weight-normal;
+$header-font-weight: $global-weight-bold;
 $header-font-style: normal;
 $font-family-monospace: Consolas, 'Liberation Mono', Courier, monospace;
 $header-sizes: (
@@ -117,8 +117,8 @@ $header-sizes: (
   ),
   medium: (
     'h1': 48,
-    'h2': 32,
-    'h3': 24,
+    'h2': 28,
+    'h3': 20,
     'h4': 20,
     'h5': 18,
     'h6': 16,
