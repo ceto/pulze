@@ -1,15 +1,30 @@
 .hero {
+  position: relative;
   height: calc(100vh - 5rem);
   min-height: 30rem;
   background-color: $dark-gray;
   color:$white;
   text-align: center;
   position: relative;
+  background-size: cover;
+  background-position: top center;
+  background-repeat: no-repeat;
+  background-image: url(../img/pulze-hero2.jpg);
+  &:before {
+    content:'';
+    position: absolute;
+    left:0;top:0;
+    width: 100%;
+    height: 100%;
+    background-image: linear-gradient(180deg, $dark-gray 0 , rgba($dark-gray,.25) 12.5%, rgba($dark-gray,0) 50%, rgba($dark-gray,.25) 77.5%, $dark-gray 100%);
+    z-index: 1;
+  }
 }
 
 
 .hero__text {
   @include clearfix();
+  z-index: 2;
   position: absolute;
   padding:0 1.5rem;
   width:100%;
@@ -45,6 +60,7 @@
 .hero__action {
   @include clearfix();
   position: absolute;
+  z-index: 2;
   padding:0 1.5rem;
   width:100%;
   bottom:11%;

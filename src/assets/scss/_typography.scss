@@ -12,6 +12,9 @@ h1, h2, h3, h4, h5, h6 {
 .ps__title {
   text-align: center;
   margin:0 0;
+  .testimonials & {
+    font-family: $body-font-family;
+  }
 }
 
 .withlinea {
@@ -26,6 +29,10 @@ h1, h2, h3, h4, h5, h6 {
     background-color: $primary-color;
   }
 
+  &.seccol:after {
+    background-color: $secondary-color;
+  }
+
 }
 
 
@@ -35,4 +42,21 @@ h1, h2, h3, h4, h5, h6 {
 }
 .seccol {
   color:$secondary-color;
+}
+
+
+blockquote {
+  text-align: center;
+  background-color: $dark-gray;
+  p:last-of-type {
+    margin-bottom: 4rem;
+  }
+  cite {
+    font-family: $header-font-family;
+    font-style: normal;
+  }
+}
+
+.ffsans {
+  font-family: $header-font-family;
 }

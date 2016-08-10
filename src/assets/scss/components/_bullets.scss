@@ -1,3 +1,12 @@
+.bulletblock {
+
+}
+
+.bulletblock--pricol {
+  .bullet--title {
+
+  }
+}
 .bullet {
   margin: 2rem 0;
 
@@ -18,7 +27,11 @@
   }
 }
 .bullet__title {
+  color:$primary-color;
   @include breakpoint(large) {
     margin-left: 23%;
+  }
+  &.seccol {
+    color:$secondary-color;
   }
 }

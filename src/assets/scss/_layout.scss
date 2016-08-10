@@ -11,3 +11,32 @@
   margin-top:0;
   margin-bottom: 0;
 }
+
+.ps--inverse {
+  background-color: $dark-gray;
+  color:$white;
+}
+
+
+.applist {
+  text-align: center;
+  font-family: $header-font-family;
+  font-size: .875rem;
+  img {
+    display: block;
+    max-width: 4rem;
+    margin:0 auto .5rem;
+  }
+}
+
+
+.sitefooter {
+  background-color: $dark-gray;
+  color:$light-gray;
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+  font-family: $header-font-family;
+  font-size: .875rem;
+  line-height: 1;
+
+}

@@ -119,7 +119,23 @@ function images() {
 // Start a server with BrowserSync to preview the site in
 function server(done) {
   browser.init({
-    server: PATHS.dist, port: PORT
+    server: PATHS.dist, port: PORT,
+    notify: {
+      styles: {
+          top: 'auto',
+          bottom: '0',
+          margin: '0px',
+          padding: '5px',
+          position: 'fixed',
+          fontSize: '10px',
+          zIndex: '9999',
+          borderRadius: '5px 0px 0px',
+          color: 'white',
+          textAlign: 'center',
+          display: 'block',
+          backgroundColor: 'rgba(57, 97, 118, 0.498039)'
+      }
+    }
   });
   done();
 }
