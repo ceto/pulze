@@ -1,0 +1,38 @@
+.top-bar {
+  text-transform: uppercase;
+  .button {
+    margin-top: .666rem;
+    margin-left: .875rem;
+
+    text-transform: uppercase;
+  }
+}
+.sitelogo {
+  display: block;
+  overflow: hidden;
+
+  width: 7.5rem;
+  height: 4rem;
+
+  white-space: nowrap;
+  text-indent: 100%;
+  //background-color: red;
+  background-image: url(../img/logo.svg);
+  background-repeat: no-repeat;
+  background-position: 50%;
+  background-size: 100% auto;
+}
+
+.menu {
+  > li {
+    > a {
+      font-family: $header-font-family;
+      //font-size: .875rem;
+
+      color: $white;
+      &:hover {
+        color: $primary-color;
+      }
+    }
+  }
+}

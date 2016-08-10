@@ -1,0 +1,65 @@
+.hero {
+  height: calc(100vh - 5rem);
+  min-height: 30rem;
+  background-color: $dark-gray;
+  color:$white;
+  text-align: center;
+  position: relative;
+}
+
+
+.hero__text {
+  @include clearfix();
+  position: absolute;
+  padding:0 1.5rem;
+  width:100%;
+  top:40%;
+  transform: translateY(-50%);
+}
+.hero__title {
+  margin:0 0 .666em;
+  line-height: 1;
+  font-weight: 300;
+  &:after {
+    content: '';
+    display: block;
+    margin:.5em auto 0;
+    height:2px;
+    width: 2.5em;
+    background-color: $primary-color;
+  }
+}
+
+.hero__subtitle {
+  line-height: 1;
+  margin:0;
+  text-transform: uppercase;
+  font-size: 1.125rem;
+  position: relative;
+  font-weight: 400;
+}
+
+.hero__action {
+  @include clearfix();
+  position: absolute;
+  padding:0 1.5rem;
+  width:100%;
+  bottom:11%;
+    p {
+    margin: .5em 0 0;
+    font-size: .875rem;
+    font-family: $header-font-family;
+    //font-style: italic;
+    //font-weight: 700;
+    a {
+      //color:$secondary-color;
+    }
+  }
+
+  .button {
+    margin:0;
+    text-transform: uppercase;
+    padding-left: 2.5em;
+    padding-right: 2.5em;
+  }
+}

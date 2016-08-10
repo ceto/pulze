@@ -1,0 +1,13 @@
+.ps {
+  padding-top:4rem;
+  padding-bottom: 4rem;
+  @include breakpoint(large) {
+    padding-top: 12vh;
+    padding-bottom: 12vh;
+  }
+}
+
+.ps + hr {
+  margin-top:0;
+  margin-bottom: 0;
+}

@@ -1,0 +1,29 @@
+.button {
+  font-family: $header-font-family;
+  border-width: 2px;
+}
+.button--ghost {
+  background-color: transparent;
+  border-color: $primary-color;
+  &:hover, &:focus {
+    background-color: transparent;
+    //color:$anchor-color-hover;
+    border-color: $anchor-color-hover;
+  }
+}
+
+label {
+  font-family: $header-font-family;
+  text-transform: uppercase;
+}
+[type='text'], [type='password'], [type='date'], [type='datetime'], [type='datetime-local'], [type='month'], [type='week'], [type='email'], [type='number'], [type='search'], [type='tel'], [type='time'], [type='url'], [type='color'], textarea {
+  font-family: $header-font-family;
+}
+
+select {
+  font-family: $header-font-family;
+}
+
+.inverseblock {
+
+}
