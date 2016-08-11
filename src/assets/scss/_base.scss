@@ -1,3 +1,7 @@
+.callout {
+  font-size: .875rem;
+  //font-family: $header-font-family;
+}
 .button {
   font-family: $header-font-family;
   border-width: 2px;
@@ -12,7 +16,9 @@
     border-color: $anchor-color-hover;
   }
 }
-
+.button--squared {
+  border-radius: 0;
+}
 
 .inverseblock {
 

@@ -1,11 +1,11 @@
 .signuppage {
-  border-top: 1px solid $medium-gray;
+  //border-top: 1px solid $medium-gray;
 }
 .smartlabelled {
   position: relative;
   margin-bottom: $form-spacing;
   overflow: hiden;
-  label {
+  label  {
     position: absolute;
     //color:$primary-color;
     top:1.125rem;
@@ -18,6 +18,16 @@
     padding:0;
     opacity: 0;
     transition: all 0.25s ease-in-out;
+  }
+
+  .form-error {
+    position: absolute;
+    top:1.25rem;
+    right:6%;
+    margin:0;
+    line-height: 1;
+    height:1em;
+
   }
 
   .filled + label {
@@ -51,7 +61,14 @@ label {
       right:6%;
       text-shadow:0 0 .5em $medium-gray;
     }
+    &:focus + label + .form-error {
+        opacity: 0;
+    }
   }
+}
+
+.is-invalid-input:not(:focus) {
+  background-color: $medium-gray;
 }
 
 input:focus::-webkit-input-placeholder, textarea:focus::-webkit-input-placeholder {
@@ -91,7 +108,7 @@ legend {
 
 .row.buttonized {
   overflow:hidden;
-  margin:-.666rem 0 0 -1.4rem;
+  margin:-.666rem 0 -.666rem -1.4rem;
   .column {
     padding:.666rem;
   }
@@ -115,9 +132,19 @@ legend {
     white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis;
+        box-shadow: 0 0 2px 0 rgba($medium-gray,.333);
+        border:1px solid $dark-gray;
     &:hover {
       background-color: $light-gray;
     }
 
+  }
+}
+
+.formactions {
+  margin-top: -1.333rem;
+  .button {
+    font-weight: $global-weight-bold;
+    //text-transform: uppercase;
   }
 }

@@ -186,9 +186,9 @@ $stat-font-size: 2.5rem;
 
 $abide-inputs: true;
 $abide-labels: true;
-$input-background-invalid: map-get($foundation-palette, alert);
-$form-label-color-invalid: map-get($foundation-palette, alert);
-$input-error-color: map-get($foundation-palette, alert);
+$input-background-invalid: map-get($foundation-palette, primary);
+$form-label-color-invalid: map-get($foundation-palette, primary);
+$input-error-color: map-get($foundation-palette, primary);
 $input-error-font-size: rem-calc(12);
 $input-error-font-weight: $global-weight-bold;
 
@@ -262,15 +262,15 @@ $buttongroup-expand-max: 6;
 // 13. Callout
 // -----------
 
-$callout-background: $white;
-$callout-background-fade: 85%;
-$callout-border: 1px solid rgba($black, 0.25);
-$callout-margin: 0 0 1rem 0;
-$callout-padding: 1rem;
-$callout-font-color: $body-font-color;
+$callout-background: $dark-gray;
+$callout-background-fade: 0;
+$callout-border: 1px solid $medium-gray;
+$callout-margin: .5rem 0 1rem 0;
+$callout-padding: 1.5rem 2rem;
+$callout-font-color: $light-gray;
 $callout-font-color-alt: $body-background;
 $callout-radius: $global-radius;
-$callout-link-tint: 30%;
+$callout-link-tint: 0;
 
 // 14. Close Button
 // ----------------
@@ -352,7 +352,7 @@ $input-background-focus: $light-gray;
 $input-background-disabled: $light-gray;
 $input-border: 1px solid $medium-gray;
 $input-border-focus: 1px solid $light-gray;
-$input-shadow: inset 0 1px 2px rgba($black, 0.1);
+$input-shadow: inset 0 1px 5px rgba($black, 0.333);
 $input-shadow-focus: inset 0 1px 5px rgba($black, 0.5);
 $input-cursor-disabled: default;
 $input-transition: box-shadow 0.5s, border-color 0.25s ease-in-out;

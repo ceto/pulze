@@ -66,6 +66,9 @@ html {
 .ps--inverse {
   color: $white;
   background-color: $dark-gray;
+  hr {
+    border-color: $medium-gray;
+  }
 }
 
 
