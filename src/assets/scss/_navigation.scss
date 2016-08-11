@@ -1,3 +1,6 @@
+.sticky {
+  z-index:4;
+}
 .top-bar {
   text-transform: uppercase;
   //border-bottom: 1px solid $medium-gray;
@@ -8,6 +11,7 @@
     text-transform: uppercase;
     padding: $button-padding;
     font-weight: $global-weight-normal;
+    color: $white;
     &:hover {
       color:$white;
       //background-color: map-get($foundation-palette,'success')
@@ -27,11 +31,20 @@
   }
 }
 .menutoggler {
-  float:left;
+  position: absolute;
+  left:50%;
+  top:2rem;
+  transform:translateX(-40%);
   display: inline-block;
-  margin: 1rem 0 0;
+  color:$white;
+  font-family: $header-font-family;
+  line-height: 1;
+  font-size: .75rem;
   @include breakpoint('large') {
     display: none;
+  }
+  a {
+    color:$white;
   }
 }
 .sitelogo {
@@ -55,12 +68,43 @@
   > li {
     > a {
       font-family: $header-font-family;
-      //font-size: .875rem;
+      &.active, &:hover {
 
+      }
+    }
+  }
+}
+
+.menu--main {
+  > li {
+    text-align: center;
+    > a {
       color: $white;
       &.active, &:hover {
         color: $primary-color;
       }
+    }
+  }
+}
+
+.responsive-menu {
+  position: absolute;
+  left:0;
+  top:77px;
+  height:68px;
+  width:100%;
+  border-top:1px solid $medium-gray;
+  border-bottom:1px solid $medium-gray;
+  text-align: center;
+  .menu--main {
+    display: inline-block;
+  }
+  @include breakpoint(medium) {
+    position: static;
+    border:none;
+    height:auto;
+    .menu--main {
+      display: block;
     }
   }
 }
