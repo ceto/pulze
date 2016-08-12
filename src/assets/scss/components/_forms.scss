@@ -33,7 +33,12 @@
   .filled + label {
     opacity:1;
     right:6%;
+    &.is-invalid-label {
+      opacity:0;
+    }
   }
+
+
 
 }
 label {

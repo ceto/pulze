@@ -26,25 +26,27 @@ if($_POST) {
   $user_Comment = str_replace("\&#39;", "'", $user_Message);
   $user_Comment = str_replace("&#39;", "'", $user_Message);
 
-  if(strlen($user_Name)<4) {
-    $output = json_encode(array('type'=>'error', 'text' => 'Full name is required'));
-    die($output);
-  }
-  if(!filter_var($user_Email, FILTER_VALIDATE_EMAIL)) {
-    $output = json_encode(array('type'=>'error', 'text' => 'Valid E-mail is required'));
-    die($output);
-  }
+  // if(strlen($user_Name)<4) {
+  //   $output = json_encode(array('type'=>'error', 'text' => 'Full name is required'));
+  //   die($output);
+  // }
+  // if(!filter_var($user_Email, FILTER_VALIDATE_EMAIL)) {
+  //   $output = json_encode(array('type'=>'error', 'text' => 'Valid E-mail is required'));
+  //   die($output);
+  // }
   // if(strlen($user_Message)<6) {
   //   $output = json_encode(array('type'=>'error', 'text' => '<strong>Message is too short</strong>'));
   //   die($output);
   // }
+
+  $emailcontent = 'Name: '.$user_Name. "\r\n".'E-mail: '.$user_Email. "\r\n\n".'--'."\r\n".$user_Comment;
 
 
   $headers = 'From: '.$user_Email.'' . "\r\n" .
   'Reply-To: '.$user_Email.'' . "\r\n" .
   'X-Mailer: PHP/' . phpversion();
 
-  $sentMail = @mail($to_Email, $subject, 'Name: '.$user_Name. "\r\n". 'E-mail: '.$user_Email. "\r\n\n".'--'."\r\n".$user_Comment, $headers);
+  $sentMail = @mail($to_Email, $subject, $emailcontent, $headers);
 
   if(!$sentMail) {
     $output = json_encode(array('type'=>'error', 'text' => 'Failed to send message!'));
