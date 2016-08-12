@@ -19,7 +19,13 @@
   }
   @include breakpoint(medium) {
     padding-left: 1rem;
-    padding-right: 1rem;
+    padding-right: 1.5rem;
+  }
+  @include breakpoint(xlarge) {
+    padding-left: 2rem;
+    padding-right: 2.75rem;
+    padding-top: 1.25rem;
+    padding-bottom:1.25rem;
   }
 }
 
@@ -89,8 +95,9 @@
 
 .responsive-menu {
   position: absolute;
+  z-index: 3;
   left:0;
-  top:77px;
+  top:75px;
   height:68px;
   width:100%;
   border-top:1px solid $medium-gray;

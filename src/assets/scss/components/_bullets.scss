@@ -1,5 +1,4 @@
 .bulletblock {
-
 }
 
 .bulletblock--pricol {
@@ -8,28 +7,33 @@
   }
 }
 .bullet {
-  margin: 2rem 0;
+  @include clearfix();
+  margin: 0 0 2rem;
 
   @include clearfix();
   img {
     float: left;
+    max-width: 4.333rem;
+    margin-right: .75rem;
 
-    max-width: 19%;
-    margin-right: 4%;
-    //margin-bottom: 5rem;
+    @include breakpoint(large) {
+      max-width: 5.5rem;
+      margin-right: 1.5rem;
+    }
   }
   p {
     font-size: .875rem;
 
     @include breakpoint(large) {
-      margin-left: 23%;
+      margin-left: 7rem;
     }
   }
 }
 .bullet__title {
+  margin-top: -.25em;
   color:$primary-color;
   @include breakpoint(large) {
-    margin-left: 23%;
+    margin-left: 7rem;
   }
   &.seccol {
     color:$secondary-color;

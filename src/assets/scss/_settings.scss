@@ -80,8 +80,8 @@ $print-transparent-backgrounds: true;
 
 $breakpoints: (
   small: 0,
-  medium: 640px,
-  large: 1024px,
+  medium: 680px,
+  large: 960px,
   xlarge: 1200px,
   xxlarge: 1440px,
 );
@@ -146,7 +146,7 @@ $anchor-color-hover: scale-color($anchor-color, $lightness: -14%);
 $anchor-text-decoration: none;
 $anchor-text-decoration-hover: none;
 $hr-width: $global-width;
-$hr-border: 1px solid $light-gray;
+$hr-border: 1px solid scale-color($light-gray, $lightness: 75%);
 $hr-margin: rem-calc(20) auto;
 $list-lineheight: $paragraph-lineheight;
 $list-margin-bottom: $paragraph-margin-bottom;
@@ -264,10 +264,10 @@ $buttongroup-expand-max: 6;
 
 $callout-background: $dark-gray;
 $callout-background-fade: 0;
-$callout-border: 1px solid $medium-gray;
+$callout-border: 1px solid $primary-color;
 $callout-margin: .5rem 0 1rem 0;
 $callout-padding: 1.5rem 2rem;
-$callout-font-color: $light-gray;
+$callout-font-color: $white;
 $callout-font-color-alt: $body-background;
 $callout-radius: $global-radius;
 $callout-link-tint: 0;
@@ -560,7 +560,7 @@ $tooltip-radius: $global-radius;
 // 36. Top Bar
 // -----------
 
-$topbar-padding: 0.5rem;
+$topbar-padding: .5rem 1rem .5rem .75rem;
 $topbar-background: $dark-gray;
 $topbar-submenu-background: $topbar-background;
 $topbar-title-spacing: 1rem;

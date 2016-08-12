@@ -28,9 +28,16 @@ figure {
   margin:0 0 $paragraph-margin-bottom * 3 ;
   text-align: center;
   &.screenshot {
+
     img {
       //border:2px solid $dark-gray;
       box-shadow: 0 0 5rem .25rem  rgba(#000,.25);
+    }
+    @include breakpoint(large) {
+      margin-bottom: 6rem;
+      // max-width: 75%;
+      // margin-left:auto;
+      // margin-right: auto;
     }
   }
   figcaption {
