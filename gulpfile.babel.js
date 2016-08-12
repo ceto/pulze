@@ -9,6 +9,7 @@ import rimraf   from 'rimraf';
 import sherpa   from 'style-sherpa';
 import yaml     from 'js-yaml';
 import fs       from 'fs';
+import ghPages  from 'gulp-gh-pages';
 
 // Load all Gulp plugins into one variable
 const $ = plugins();
@@ -24,6 +25,8 @@ function loadConfig() {
   return yaml.load(ymlFile);
 }
 
+
+
 // Build the "dist" folder by running all of the below tasks
 gulp.task('build',
  gulp.series(clean, gulp.parallel(pages, sass, javascript, images, copy), styleGuide));
@@ -31,6 +34,26 @@ gulp.task('build',
 // Build the site, run the server, and watch for file changes
 gulp.task('default',
   gulp.series('build', server, watch));
+
+
+// Build & Deploy the "dist" folder by running all of the below tasks
+gulp.task('deploy',
+ gulp.series('build', copyCname, githubDeploy ));
+
+
+// Deploy site
+function githubDeploy() {
+  return gulp.src('./dist/**/*')
+    .pipe(ghPages());
+};
+
+
+// Copy CNAME
+function copyCname() {
+  return gulp.src('CNAME')
+    .pipe(gulp.dest(PATHS.dist));
+}
+
 
 // Delete the "dist" folder
 // This happens every time a build starts
