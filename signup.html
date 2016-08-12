@@ -39,7 +39,7 @@
           <h3 class="ps__title withlinea">Some fill-in instructions goes here</h3>
           <p>Some instruction placeholder text Lorem ipsum dolor sit amet, consectetur adipisicing elit. Id quidem quos assumenda recusandae et autem, dolorum maiores ducimus dolor suscipit nobis libero quaerat harum deserunt ipsum esse quia iure adipisci.</p>
           <p>&nbsp;</p>
-          <form data-abide novalidate>
+          <form id="signupform" class="signupform" action="assets/mailer.php" method="post" data-abide novalidate>
             <fieldset>
               <legend>Additional informations</legend>
               <div class="row">
@@ -192,11 +192,15 @@
             </fieldset>
             <div class="row formactions">
               <div class="columns">
+                <input type="hidden" name="message_human" value="2">
+                <input type="hidden" name="submitted" value="1">
                 <input class="button button--squared expanded" type="submit" value="Send registration">
               </div>
             </div>
-            <div data-abide-error class="callout" style="display: none;">
-              <p>There are some errors in your form.</p>
+            <div id="result">
+              <div data-abide-error class="callout" style="display: none;">
+                <p>There are some errors in your form.</p>
+              </div>
             </div>
           </form>
         </div>
