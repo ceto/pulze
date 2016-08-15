@@ -14,6 +14,21 @@ $(document).on('formvalid.zf.abide', function(ev,frm) {
   //   proceed = false;
   // }
 
+  var user_fields = new Array();
+  $('input:checkbox[name="field[]"]:checked').each(function() {
+    user_fields.push($(this).val());
+  });
+  var user_apps = new Array();
+  $('input:checkbox[name="app[]"]:checked').each(function() {
+    user_apps.push($(this).val());
+  });
+
+  var user_engines = new Array();
+  $('input:checkbox[name="engine[]"]:checked').each(function() {
+    user_engines.push($(this).val());
+  });
+
+
   //everything looks good! proceed...
   if (proceed) {
       //data to be sent to server
@@ -21,7 +36,10 @@ $(document).on('formvalid.zf.abide', function(ev,frm) {
           'userName': user_name,
           'userEmail': user_email,
           'userConame': user_coname,
-          'userComment': user_comment
+          'userComment': user_comment,
+          'userFields': user_fields,
+          'userApps': user_apps,
+          'userEngines': user_engines
       };
 
       //Ajax post data to server

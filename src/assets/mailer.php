@@ -18,6 +18,7 @@ if($_POST) {
     $output = json_encode(array('type'=>'error', 'text' => 'Marked fields are required.'));
     die($output);
   }
+
   $user_Name = filter_var($_POST["userName"], FILTER_SANITIZE_STRING);
   $user_Email = filter_var($_POST["userEmail"], FILTER_SANITIZE_EMAIL);
   $user_Coname = filter_var($_POST["userConame"], FILTER_SANITIZE_STRING);
@@ -25,6 +26,34 @@ if($_POST) {
 
   $user_Comment = str_replace("\&#39;", "'", $user_Message);
   $user_Comment = str_replace("&#39;", "'", $user_Message);
+
+  if(array_key_exists('userFields', $_POST) && !empty($_POST['userFields'])) {
+    $text_Fields.='<p><strong>Fields</strong>: ';
+    foreach($_POST["userFields"] as $key => $value) {
+      $text_Fields.= $value.', ';
+    }
+    $text_Fields.='</p>';
+  }
+
+  if(array_key_exists('userApps', $_POST) && !empty($_POST['userApps'])) {
+    $text_Apps.='<p><strong>Apps</strong>: ';
+    foreach($_POST["userApps"] as $key => $value) {
+      $text_Apps.= $value.', ';
+    }
+    $text_Apps.='</p>';
+  }
+
+  if(array_key_exists('userEngines', $_POST) && !empty($_POST['userEngines'])) {
+    $text_Engines.='<p><strong>Engines</strong>: ';
+    foreach($_POST["userEngines"] as $key => $value) {
+      $text_Engines.= $value.', ';
+    }
+    $text_Engines.='</p>';
+  }
+
+
+
+
 
   // if(strlen($user_Name)<4) {
   //   $output = json_encode(array('type'=>'error', 'text' => 'Full name is required'));
