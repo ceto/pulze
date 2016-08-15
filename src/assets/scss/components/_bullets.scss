@@ -29,6 +29,22 @@
     }
   }
 }
+.bullet__icon {
+  fill: $primary-color;
+  float: left;
+  max-width: 4.333rem;
+  margin-right: .75rem;
+
+  @include breakpoint(large) {
+    max-width: 5.5rem;
+    margin-right: 1.5rem;
+  }
+}
+
+svg .defcol {
+  fill:currentColor;
+}
+
 .bullet__title {
   margin-top: -.25em;
   color:$primary-color;

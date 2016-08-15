@@ -10,6 +10,10 @@ import sherpa   from 'style-sherpa';
 import yaml     from 'js-yaml';
 import fs       from 'fs';
 import ghPages  from 'gulp-gh-pages';
+import rename   from 'gulp-rename';
+import svgstore from 'gulp-svgstore';
+import svgmin   from 'gulp-svgmin';
+import inject   from 'gulp-inject';
 
 // Load all Gulp plugins into one variable
 const $ = plugins();
@@ -26,10 +30,28 @@ function loadConfig() {
 }
 
 
+//SVG
+gulp.task('svgicons', function () {
+  var svgs = gulp
+        .src('src/assets/icons/*.svg')
+        .pipe(rename({prefix: 'icon-'}))
+        //.pipe(svgmin())
+        .pipe(svgstore({ inlineSvg: true }));
+
+  function fileContents (filePath, file) {
+      return file.contents.toString();
+  }
+
+  return gulp
+      .src('src/partials/svgicons.html')
+      .pipe(inject(svgs, { transform: fileContents }))
+      .pipe(gulp.dest('src/partials'));
+});
+
 
 // Build the "dist" folder by running all of the below tasks
 gulp.task('build',
- gulp.series(clean, gulp.parallel(pages, sass, javascript, images, copy), styleGuide));
+ gulp.series(clean, 'svgicons', gulp.parallel(pages, sass, javascript, images, copy), styleGuide));
 
 // Build the site, run the server, and watch for file changes
 gulp.task('default',
@@ -178,4 +200,5 @@ function watch() {
   gulp.watch('src/assets/js/**/*.js').on('change', gulp.series(javascript, browser.reload));
   gulp.watch('src/assets/img/**/*').on('change', gulp.series(images, browser.reload));
   gulp.watch('src/styleguide/**').on('change', gulp.series(styleGuide, browser.reload));
+  gulp.watch('src/assets/icons/**/*.svg').on('change', gulp.series('svgicons', resetPages, pages, browser.reload));
 }
