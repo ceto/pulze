@@ -1,18 +1,42 @@
- /*** Signup Form ******/
+$('#customfield').on('change', function() {
+  if ( $(this).val().length > 0 ) {
+    $('#fieldother').val( $(this).val() );
+  } else {
+    $('#fieldother').val('Other');
+    $('#fieldother').click();
+  }
+});
+
+$('#customapp').on('change', function() {
+  if ( $(this).val().length > 0 ) {
+    $('#appother').val( $(this).val() );
+  } else {
+    $('#appother').val('Other');
+    $('#appother').click();
+  }
+});
+
+$('#customengine').on('change', function() {
+  if ( $(this).val().length > 0 ) {
+    $('#engineother').val( $(this).val() );
+  } else {
+    $('#engineother').val('Other');
+    $('#engineother').click();
+  }
+});
+
+
+
+/*** Signup Form ******/
 $(document).on('formvalid.zf.abide', function(ev,frm) {
 
   var user_name = $('input[name=name]').val();
   var user_email = $('input[name=email]').val();
   var user_coname = $('input[name=co_name]').val();
+  var user_noemployees = $('select[name=no_employees]').val();
   var user_comment = $('textarea[name=comment]').val();
 
   var proceed = true;
-  // if (user_name === '') {
-  //   frm.foundation('addErrorClasses', $('#name'));
-  //   frm.find('#name + label').addClass('is-invalid-label');
-  //   frm.find('#name + label + .form-error').addClass('is-visible');
-  //   proceed = false;
-  // }
 
   var user_fields = new Array();
   $('input:checkbox[name="field[]"]:checked').each(function() {
@@ -36,6 +60,7 @@ $(document).on('formvalid.zf.abide', function(ev,frm) {
           'userName': user_name,
           'userEmail': user_email,
           'userConame': user_coname,
+          'userNoemployees' : user_noemployees,
           'userComment': user_comment,
           'userFields': user_fields,
           'userApps': user_apps,
