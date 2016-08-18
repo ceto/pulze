@@ -1,18 +1,14 @@
-.bulletblock {
-}
 
-.bulletblock--pricol {
-  .bullet--title {
 
-  }
-}
+
 .bullet {
-  @include clearfix();
   margin: 0 0 2rem;
 
   @include clearfix();
+  @include clearfix();
   img {
     float: left;
+
     max-width: 4.333rem;
     margin-right: .75rem;
 
@@ -30,28 +26,33 @@
   }
 }
 .bullet__icon {
-  fill: $primary-color;
   float: left;
-  max-width: 4.333rem;
+
+  width: 4.25rem;
+  height: 4.25rem;
   margin-right: .75rem;
 
+  fill: $primary-color;
   @include breakpoint(large) {
-    max-width: 5.5rem;
-    margin-right: 1.5rem;
+    width: 4.75rem;
+    height: 4.75rem;
+    margin-right: 2.25rem;
+  }
+  &.seccol {
+    fill: $secondary-color;
   }
 }
 
-svg .defcol {
-  fill:currentColor;
-}
 
 .bullet__title {
   margin-top: -.25em;
-  color:$primary-color;
+  //margin-bottom: 1rem;
+  color: $primary-color;
+
   @include breakpoint(large) {
     margin-left: 7rem;
   }
   &.seccol {
-    color:$secondary-color;
+    color: $secondary-color;
   }
 }

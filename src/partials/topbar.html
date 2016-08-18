@@ -1,3 +1,4 @@
+{{#unlesspage 'signup' }}
 <div class="top-bar">
   <div class="top-bar-title">
     <a class="sitelogo" href="index.html">Pulze</a>
@@ -20,3 +21,16 @@
     <a href="#" data-toggle>Menu</a>
   </span>
 </div>
+{{/unlesspage}}
+{{#ifpage 'signup' }}
+<div class="top-bar top-bar--signup">
+  <div class="top-bar-title">
+    <a class="sitelogo" href="index.html">Pulze</a>
+  </div>
+  <div class="top-bar-right topbarfeat">
+    <ul class="menu">
+      <li><a href="index.html" class="menu-text button button small">Back to home</a></li>
+    </ul>
+  </div>
+</div>
+{{/ifpage}}

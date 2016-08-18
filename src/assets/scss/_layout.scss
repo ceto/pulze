@@ -89,6 +89,7 @@ html {
 
 
 .sitefooter {
+  //border-top: 1px solid $medium-gray;
   font-family: $header-font-family;
   font-size: .875rem;
   line-height: 1;
@@ -98,4 +99,26 @@ html {
 
   color: $light-gray;
   background-color: $dark-gray;
+}
+.fcopy {
+  margin-top: .25rem;
+  margin-bottom: 1rem;
+
+  @include breakpoint(medium) {
+    margin-bottom: 0;
+  }
+}
+
+.fsocials {
+  a {
+    color: inherit;
+    &:hover, &:focus {
+      color: $primary-color;
+    }
+  }
+  svg {
+    width: 1.333rem;
+    height: 1.333rem;
+    margin-left: .5rem;
+  }
 }

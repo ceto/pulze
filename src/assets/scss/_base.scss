@@ -1,3 +1,11 @@
+svg {
+  fill:currentColor;
+}
+
+svg .circleframe {
+  fill:$body-font-color;
+}
+
 .callout {
   font-size: .875rem;
   //font-family: $header-font-family;
