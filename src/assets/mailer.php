@@ -1,8 +1,9 @@
 <?php
+  require_once '/phplib/swiftmailer/lib/swift_required.php';
+  require_once '../../mail.conf.php';
+?>
+<?php
 if($_POST) {
-  $to_Email = "szabogabi@gmail.com";
-  $subject = 'Pulze - Sign Up';
-
   if(!isset($_SERVER['HTTP_X_REQUESTED_WITH']) AND strtolower($_SERVER['HTTP_X_REQUESTED_WITH']) != 'xmlhttprequest') {
 
     $output = json_encode(
