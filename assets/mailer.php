@@ -1,8 +1,16 @@
 <?php
-if($_POST) {
-  $to_Email = "szabogabi@gmail.com";
-  $subject = 'Pulze - Sign Up';
+  require_once 'phplib/swiftmailer/lib/swift_required.php';
+  require_once '../../mail.conf.php';
 
+  // Create the Transport
+  $transport = Swift_SmtpTransport::newInstance('smtp.gmail.com', 587,'tls');
+  $transport->setUsername($smtp_user);
+  $transport->setPassword($smtp_pass);
+
+  $mailer = Swift_Mailer::newInstance($transport);
+?>
+<?php
+if($_POST) {
   if(!isset($_SERVER['HTTP_X_REQUESTED_WITH']) AND strtolower($_SERVER['HTTP_X_REQUESTED_WITH']) != 'xmlhttprequest') {
 
     $output = json_encode(
@@ -63,26 +71,29 @@ if($_POST) {
 
   $pulzemessage .= '<p><strong>Comment: </strong><br>'.$user_Comment.'</p>';
 
-  $emailcontent = 'Name: '.$user_Name. "\r\n".'E-mail: '.$user_Email. "\r\n\n".'--'."\r\n".$user_Comment;
+
+  //Compose email to Pulze
+  $pmessage = Swift_Message::newInstance();
+  $pmessage->setSubject($email_subject);
+  $pmessage->setFrom( array( $user_Email => $user_Name ) );
+  $pmessage->setTo( array( $email_to => $email_toname ) );
+  $pmessage->setBody($pulzemessage,'text/html');
 
 
-  $headers = 'From: '.$user_Email.'' . "\r\n" .
-  'Reply-To: '.$user_Email.'' . "\r\n" .
-  'X-Mailer: PHP/' . phpversion();
+  if ($presult = $mailer->send($pmessage) ) {
+    $output = json_encode(array('type'=>'message', 'text' => '<strong>Dear '.$user_Name .'</strong><br>Your registration has been successfully sent. We will contact you very soon!'));
+    //compose email to user
+    $usermessage = '<p><strong>Dear '.$user_Name.'</strong></p>'.$emailresponse;
 
-  $sentMail = @mail($to_Email, $subject, $emailcontent, $headers);
-
-  if(!$sentMail) {
-    $output = json_encode(array('type'=>'error', 'text' => 'Failed to send message!'));
+    $umessage = Swift_Message::newInstance();
+    $umessage->setSubject($email_subject);
+    $umessage->setFrom( array( $email_from => $email_fromname ) );
+    $umessage->setTo( array( $user_Email => $user_Name ) );
+    $umessage->setBody($usermessage,'text/html');
+    $uresult = $mailer->send($umessage);
     die($output);
   } else {
-
-    $resp_headers = 'From: '.$to_Email.'' . "\r\n" .
-    'Reply-To: '.$to_Email.'' . "\r\n" .
-    'X-Mailer: PHP/' . phpversion();
-    @mail($user_Email, $subject, 'Name: '.$user_Name. "\r\n". 'E-mail: '.$user_Email. "\r\n\n".'--'."\r\n".$user_Comment, $resp_headers);
-
-    $output = json_encode(array('type'=>'message', 'text' => '<strong>Dear '.$user_Name .'</strong><br>Your registration has been successfully sent. We will contact you very soon!<br>'.$pulzemessage));
+    $output = json_encode(array('type'=>'error', 'text' => 'Failed to send message!'));
     die($output);
   }
 }
