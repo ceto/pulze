@@ -60,7 +60,7 @@ gulp.task('default',
 
 // Build & Deploy the "dist" folder by running all of the below tasks
 gulp.task('deploy',
- gulp.series('build', copyCname, githubDeploy ));
+ gulp.series('build', copyDistfiles, githubDeploy ));
 
 
 // Deploy site
@@ -70,9 +70,9 @@ function githubDeploy() {
 };
 
 
-// Copy CNAME
-function copyCname() {
-  return gulp.src('CNAME')
+// Copy CNAME & .htacces
+function copyDistfiles() {
+  return gulp.src(['CNAME', '.htaccess'])
     .pipe(gulp.dest(PATHS.dist));
 }
 
