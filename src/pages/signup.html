@@ -4,9 +4,9 @@ title: Pulse - Sign Up
 <div class="ps ps--inverse signuppage">
   <div class="row">
     <div class="columns large-8 large-centered">
-      <h3 class="ps__title withlinea">Some fill-in instructions goes here</h3>
-      <p>Some instruction placeholder text Lorem ipsum dolor sit amet, consectetur adipisicing elit. Id quidem quos assumenda recusandae et autem, dolorum maiores ducimus dolor suscipit nobis libero quaerat harum deserunt ipsum esse quia iure adipisci.</p>
-      <p>&nbsp;</p>
+      <h3 class="ps__title withlinea">Get on board today and sign up for the Pulze Beta test</h3>
+      <p>Below is short form that we would like you to fill out before we get in touch. By filling out the form you agree that we use* this data to measure user needs and to set up future plans for the development.</p>
+      <p><em><small>*We do not disclose these information to any third party, but only use it internally.</small></em></p>
       <form id="signupform" class="signupform" action="assets/mailer.php" method="post" data-abide novalidate>
         <fieldset>
           <legend>Additional informations</legend>
@@ -21,6 +21,10 @@ title: Pulse - Sign Up
               <label for="co_name">Company name</label>
             </div>
             <div class="columns smartlabelled">
+              <input type="text" name="web" id="web" placeholder="Website" autocomplete="off" />
+              <label for="web">Website</label>
+            </div>
+            <div class="columns smartlabelled">
               <input type="Email" name="email" id="email" placeholder="Email" pattern="email" autocomplete="off" required />
               <label for="email">Email</label>
               <span class="form-error">Email is required</span>
@@ -28,7 +32,7 @@ title: Pulse - Sign Up
           </div>
         </fieldset>
         <fieldset>
-          <legend>Field of work (Choose as many as you need)</legend>
+          <legend>Select your industry</legend>
           <div class="row small-up-2 medium-up-3 xxlarge-up-4 buttonized">
             <div class="column">
               <input id="field1" name="field[]" value="Archviz" type="checkbox">
@@ -47,21 +51,37 @@ title: Pulse - Sign Up
               <label for="field4">Design</label>
             </div>
             <div class="column">
-              <input id="field5" name="field[]" value="Cinema 4D" type="checkbox">
-              <label for="field5">Cinema 4D</label>
+              <input id="field5" name="field[]" value="VFX" type="checkbox">
+              <label for="field5">VFX</label>
             </div>
             <div class="column">
-              <input id="field6" name="field[]" value="Other" type="checkbox">
-              <label for="field6">Other</label>
+              <input id="fieldother" name="field[]" value="Other" type="checkbox" data-toggle="otherfield">
+              <label for="fieldother">Other</label>
+            </div>
+          </div>
+          <div id="otherfield" class="row is-hidden" data-toggler="is-hidden">
+            <br>
+            <div class="columns smartlabelled">
+              <input id="customfield" placeholder="Add your industry" name="customfield" type="text">
+              <label for="customfield">Industry</label>
             </div>
           </div>
         </fieldset>
         <fieldset>
-          <legend>Company informations</legend>
+          <legend>Company information</legend>
           <div class="row">
-            <div class="large-12 columns">
-              <label>Number of employees</label>
+            <div class="columns">
+              <label for="no_employees">Number of employees</label>
               <select name="no_employees" id="no_employees">
+                <option value="Between 1 and 10">1-10</option>
+                <option value="Between 11 and 30">11-30</option>
+                <option value="Between 31 and 50">31-50</option>
+                <option value="Over 50">Over 50</option>
+              </select>
+            </div>
+            <div class="columns">
+              <label for="no_wsrn">Number of workstations and render nodes</label>
+              <select name="no_wsrn" id="no_wsrn">
                 <option value="Between 1 and 10">1-10</option>
                 <option value="Between 11 and 30">11-30</option>
                 <option value="Between 31 and 50">31-50</option>
@@ -71,7 +91,7 @@ title: Pulse - Sign Up
           </div>
         </fieldset>
         <fieldset>
-          <legend>Choose the programs that you use</legend>
+          <legend>Select your 3d package and render engine</legend>
           <div class="row small-up-2 medium-up-3 xxlarge-up-4 buttonized">
             <div class="column">
               <input id="app1" name="app[]" value="3ds Max" type="checkbox">
@@ -86,20 +106,35 @@ title: Pulse - Sign Up
               <label for="app3">Modo</label>
             </div>
             <div class="column">
-              <input id="app4" name="app[]" value="Blender" type="checkbox">
-              <label for="app4">Blender</label>
+              <input id="app4" name="app[]" value="Cinema 4D" type="checkbox">
+              <label for="app4">Cinema 4D</label>
             </div>
             <div class="column">
               <input id="app5" name="app[]" value="Sketch Up" type="checkbox">
               <label for="app5">Sketch Up</label>
             </div>
             <div class="column">
-              <input id="app6" name="app[]" value="Rhino" type="checkbox">
-              <label for="app6">Rhino</label>
+              <input id="app6" name="app[]" value="Blender" type="checkbox">
+              <label for="app6">Blender</label>
+            </div>
+            <div class="column">
+              <input id="app7" name="app[]" value="Rhino" type="checkbox">
+              <label for="app7">Rhino</label>
             </div>
             <div class="column">
               <input id="app7" name="app[]" value="Revit" type="checkbox">
               <label for="app7">Revit</label>
+            </div>
+            <div class="column">
+              <input id="appother" name="app[]" value="Other" type="checkbox" data-toggle="otherapp">
+              <label for="appother">Other</label>
+            </div>
+          </div>
+          <div id="otherapp" class="row is-hidden" data-toggler="is-hidden">
+            <br>
+            <div class="columns smartlabelled">
+              <input id="customapp" placeholder="Add 3d package" name="customapp" type="text">
+              <label for="customapp">Custom 3d package</label>
             </div>
           </div>
           <hr>
@@ -121,20 +156,12 @@ title: Pulse - Sign Up
               <label for="engine4">Arnold</label>
             </div>
             <div class="column">
-              <input id="engine5" name="engine[]" value="Octane" type="checkbox">
-              <label for="engine5">Octane</label>
+              <input id="engine5" name="engine[]" value="Redshift" type="checkbox">
+              <label for="engine5">Redshift</label>
             </div>
             <div class="column">
-              <input id="engine6" name="engine[]" value="Redshift" type="checkbox">
-              <label for="engine6">Redshift</label>
-            </div>
-            <div class="column">
-              <input id="engine7" name="engine[]" value="Mental-Ray" type="checkbox">
-              <label for="engine7">Mental-Ray</label>
-            </div>
-            <div class="column">
-              <input id="engine8" name="engine[]" value="Cycles" type="checkbox">
-              <label for="engine8">Cycles</label>
+              <input id="engine6" name="engine[]" value="Mental-Ray" type="checkbox">
+              <label for="engine6">Mental-Ray</label>
             </div>
             <div class="column">
               <input id="engineother" name="engine[]" value="Other" type="checkbox" data-toggle="otherengine">
@@ -144,13 +171,13 @@ title: Pulse - Sign Up
           <div id="otherengine" class="row is-hidden" data-toggler="is-hidden">
             <br>
             <div class="columns smartlabelled">
-              <input id="customengine" placeholder="Add engine" name="customengine" type="text">
-              <label for="customengine">Engine</label>
+              <input id="customengine" placeholder="Add custom engine" name="customengine" type="text">
+              <label for="customengine">Custom engine</label>
             </div>
           </div>
         </fieldset>
         <fieldset>
-          <legend>Give us feedback</legend>
+          <legend>Anything else we didn’t ask already, and you find important?</legend>
           <div class="row">
             <div class="columns smartlabelled">
               <textarea name="comment" id="comment" placeholder="Comment" rows="5"></textarea>

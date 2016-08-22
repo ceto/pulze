@@ -33,7 +33,9 @@ $(document).on('formvalid.zf.abide', function(ev,frm) {
   var user_name = $('input[name=name]').val();
   var user_email = $('input[name=email]').val();
   var user_coname = $('input[name=co_name]').val();
+  var user_web = $('input[name=web]').val();
   var user_noemployees = $('select[name=no_employees]').val();
+  var user_nowsrn = $('select[name=no_nowsrn]').val();
   var user_comment = $('textarea[name=comment]').val();
 
   var proceed = true;
@@ -60,7 +62,9 @@ $(document).on('formvalid.zf.abide', function(ev,frm) {
           'userName': user_name,
           'userEmail': user_email,
           'userConame': user_coname,
+          'userWeb': user_web,
           'userNoemployees' : user_noemployees,
+          'userNowsrn' : user_nowsrn,
           'userComment': user_comment,
           'userFields': user_fields,
           'userApps': user_apps,
