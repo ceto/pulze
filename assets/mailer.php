@@ -30,6 +30,8 @@ if($_POST) {
   $user_Name = filter_var($_POST["userName"], FILTER_SANITIZE_STRING);
   $user_Email = filter_var($_POST["userEmail"], FILTER_SANITIZE_EMAIL);
   $user_Coname = filter_var($_POST["userConame"], FILTER_SANITIZE_STRING);
+  $user_Web = filter_var($_POST["userWeb"], FILTER_SANITIZE_STRING);
+  $user_Nowsrn = filter_var($_POST["userNowsrn"], FILTER_SANITIZE_STRING);
   $user_Noemployees = filter_var($_POST["userNoemployees"], FILTER_SANITIZE_STRING);
   $user_Comment = filter_var($_POST["userComment"], FILTER_SANITIZE_STRING);
 
@@ -37,10 +39,12 @@ if($_POST) {
   $user_Comment = str_replace("&#39;", "'", $user_Comment);
 
 
-  $pulzemessage = '<p><strong>Name: </strong> '.$user_Name.'<br>'.
-                      '<strong>Email: </strong> '.$user_Email.'<br>'.
-                      '<strong>Company: </strong> '.$user_Coname.'<br>'.
-                      '<strong>Number of Employees: </strong> '.$user_Noemployees.'<p><hr>';
+  $pulzemessage = '<p><strong>Name:</strong> '.$user_Name.'<br>'.
+                      '<strong>Email:</strong> '.$user_Email.'<br>'.
+                      '<strong>Company:</strong> '.$user_Coname.'<br>'.
+                      '<strong>Web:</strong> '.$user_Web.'<br>'.
+                      '<strong>Number of Employees:</strong> '.$user_Noemployees.'<br>'.
+                      '<strong>Number of workstations and render nodes:</strong> '.$user_Nowsrn.'<p><hr>';
 
   if(array_key_exists('userFields', $_POST) && !empty($_POST['userFields'])) {
     $text_Fields.='<p><strong>Fields:</strong> ';
@@ -81,7 +85,7 @@ if($_POST) {
 
 
   if ($presult = $mailer->send($pmessage) ) {
-    $output = json_encode(array('type'=>'message', 'text' => '<strong>Dear '.$user_Name .'</strong><br>Your registration has been successfully sent. We will contact you very soon!'));
+    $output = json_encode(array('type'=>'message', 'text' => '<strong>Dear '.$user_Name .'</strong><br>Thank you for signing up, we will get in touch with you shortly.'));
     //compose email to user
     $usermessage = '<p><strong>Dear '.$user_Name.'</strong></p>'.$emailresponse;
 
