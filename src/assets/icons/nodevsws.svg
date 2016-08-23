@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200">
+  <title>nodevsws</title>
+  <path class="circleframe" d="M100,200A100,100,0,1,1,200,100,100.11,100.11,0,0,1,100,200ZM100,6a94,94,0,1,0,94,94A94.14,94.14,0,0,0,100,6Z"/>
+  <g>
+    <rect x="71.86" y="95.88" width="5.97" height="37.98"/>
+    <rect x="96.88" y="81.81" width="5.97" height="52.05"/>
+    <rect x="122.17" y="66.14" width="5.97" height="67.73"/>
+  </g>
+</svg>

@@ -4,10 +4,10 @@ title: Pulze - The Newest Node Manager
 <header class="hero">
   <div class="hero__text">
     <h1 class="hero__title">Welcome to Pulze</h1>
-    <h2 class="hero__subtitle">Take the most out of your render farm</h2>
+    <h2 class="hero__subtitle">developed by <svg class="icon"><use xlink:href="#icon-bricklogo" /></svg></h2>
   </div>
   <div class="hero__action" data-magellan data-threshold="0" data-bar-offset="0">
-    <a href="signup.html" class="button button--ghost">Sign Up</a>
+    <a href="signup.html" class="button">Sign Up</a>
     <p>or <a href="#about">learn more</a></p>
   </div>
 </header>
@@ -16,8 +16,7 @@ title: Pulze - The Newest Node Manager
     <div class="columns large-10 large-centered">
       <h2 class="smalltitle withlinea">Manage your farm with its unique<br> “Reserve n Render” approach</h2>
       <p>Pulze is an in-house development of Brick Visual. Due to the ever higher number of workstations and and thus the difficulty managing the render node distribution, we had to find a way to organise and control render jobs. After more than one year of testing it in production, it is now a core element of our pipeline. Because of its real necessity and efficiency, we decided to go public and share this tool with everybody having similar needs. If you are interested, and would like to try Pulze, please sign up for the beta test, and we will get in touch with you.</p>
-      <p>Pulze is a render farm manager and monitor software. Its two main parts are the Client and the Server. Pulze’s main feature is its Reserve’n’Render approach which means that* the user can reserve a number nodes for himself. Please check the Client and the Server features for more information.</p>
-      <p><em><small>*node demand can be scheduled, thus maximizing the capacity of the farm</small></em></p>
+      <p>Pulze is a render farm manager and monitor software. Its two main parts are the Client and the Server. Pulze’s main feature is its Reserve’n’Render approach which means that node demand can be scheduled, thus maximizing the capacity of the farm. Please check the Client and the Server features for more information.</p>
     </div>
   </div>
 </section>
@@ -33,7 +32,7 @@ title: Pulze - The Newest Node Manager
               <div class="row">
                 <div class="columns medium-10 medium-centered large-12 large-uncentered" >
                   <figure class="screenshot">
-                    <img src="assets/img/screenshot-1.jpg" alt="Lorem ipsum">
+                    <img src="{{roots}}assets/img/screen-client.png" alt="Pulze Client Screenshot">
                     <figcaption>Some caption for the image above</figcaption>
                   </figure>
                 </div>
@@ -45,112 +44,115 @@ title: Pulze - The Newest Node Manager
           <div class="row small-up-1 medium-up-2 large-up-1">
             <div class="column">
               <div class="bullet">
-              <svg class="icon bullet__icon"><use xlink:href="#icon-node" /></svg>
-              <h3 class="bullet__title">Node vs Workstation</h3>
-              <p>Pulze Client has two running modes. By default, it starts in ‘node mode’ which means that it can be reserved and used for jobs. Once you register or login with your username, you will be switched to ‘workstation mode’ where you can create jobs</p>
+                <svg class="icon bullet__icon"><use xlink:href="#icon-nodevsws" /></svg>
+                <h3 class="bullet__title">Node vs Workstation</h3>
+                <p>Pulze Client has two running modes. By default, it starts in ‘node mode’ which means that it can be reserved and used for jobs. Once you register or login with your username, you will be switched to ‘workstation mode’ where you can create jobs</p>
+              </div>
+            </div>
+            <div class="column">
+              <div class="bullet">
+                <svg class="icon bullet__icon"><use xlink:href="#icon-rule" /></svg>
+                <h3 class="bullet__title">Rules</h3>
+                <p>Rules are the heart of Pulze. If it is enabled, users can only reserve a fix amount of nodes for their jobs. You can have multiple rules during the day depending on your needs. You can create or edit rules on the server side.</p>
+              </div>
+            </div>
+            <div class="column">
+              <div class="bullet">
+                <svg class="icon bullet__icon"><use xlink:href="#icon-jobcreate" /></svg>
+                <h3 class="bullet__title">Job Creation</h3>
+                <p>Creating a job only takes 3 steps. Select your job type, application and the number of nodes you wish to use. You can choose from 3 types of jobs: Distributed, Animation and Infinite. After selecting your application name, version and render engine, Pulze by default will only select the free nodes that are compatible with your job settings. After a job is created, Pulze will automatically start the required spawner if it is not running already.</p>
+              </div>
+            </div>
+            <div class="column">
+              <div class="bullet">
+                <svg class="icon bullet__icon"><use xlink:href="#icon-jobmonitor" /></svg>
+                <h3 class="bullet__title">Job Monitoring</h3>
+                <p>By selecting a job, you can get more information about it, like when it was created, when it will end, which application and engine is it using. Also with one click you can go to the project folder or the output folder, if it is provided.</p>
+              </div>
+            </div>
+            <div class="column">
+              <div class="bullet">
+                <svg class="icon bullet__icon"><use xlink:href="#icon-nodemonitor" /></svg>
+                <h3 class="bullet__title">Node Monitoring</h3>
+                <p>Monitor the status of the connected nodes and workstations. Get CPU,Memory,Disc and Uptime information. It’ also possible to restart and shutdown, or if you want full control you can connect with Remote Desktop.</p>
+              </div>
+            </div>
+            <div class="column">
+              <div class="bullet">
+                <svg class="icon bullet__icon"><use xlink:href="#icon-connector" /></svg>
+                <h3 class="bullet__title">Connector</h3>
+                <p>Another smart feature of Pulze is after you create a Distributed job, you don't need to setup anything else just hit render. For every application a Connector script is installed which will communicate with the client and it will automatically change your job status.</p>
+              </div>
             </div>
           </div>
-          <div class="column">
-            <div class="bullet">
-            <svg class="icon bullet__icon"><use xlink:href="#icon-rule" /></svg>
-            <h3 class="bullet__title">Rules</h3>
-            <p>Rules are the heart of Pulze. If it is enabled, users can only reserve a fix amount of nodes for their jobs. You can have multiple rules during the day depending on your needs. You can create or edit rules on the server side.</p>
-          </div>
-        </div>
-        <div class="column">
-          <div class="bullet">
-          <svg class="icon bullet__icon"><use xlink:href="#icon-job" /></svg>
-          <h3 class="bullet__title">Job Creation</h3>
-          <p>Creating a job only takes 3 steps. Select your job type, application and the number of nodes you wish to use. You can choose from 3 types of jobs: Distributed, Animation and Infinite. After selecting your application name, version and render engine, Pulze by default will only select the free nodes that are compatible with your job settings. After a job is created, Pulze will automatically start the required spawner if it is not running already.</p>
         </div>
       </div>
-      <div class="column">
-        <div class="bullet">
-        <svg class="icon bullet__icon"><use xlink:href="#icon-job" /></svg>
-        <h3 class="bullet__title">Job Monitoring</h3>
-        <p>By selecting a job, you can get more information about it, like when it was created, when it will end, which application and engine is it using. Also with one click you can go to the project folder or the output folder, if it is provided.</p>
-      </div>
-    </div>
-    <div class="column">
-      <div class="bullet">
-      <svg class="icon bullet__icon"><use xlink:href="#icon-node" /></svg>
-      <h3 class="bullet__title">Node Monitoring</h3>
-      <p>Monitor the status of the connected nodes and workstations. Get CPU,Memory,Disc and Uptime information. It’ also possible to restart and shutdown, or if you want full control you can connect with Remote Desktop.</p>
     </div>
   </div>
-  <div class="column">
-    <div class="bullet">
-    <svg class="icon bullet__icon"><use xlink:href="#icon-node" /></svg>
-    <h3 class="bullet__title">Connector</h3>
-    <p>Another smart feature of Pulze is after you create a Distributed job, you don't need to setup anything else just hit render. For every application a Connector script is installed which will communicate with the client and it will automatically change your job status.</p>
-  </div>
-</div>
-</div>
-</use>
-</div>
-</div>
+</section>
+
 </section>
 <section id="apps" class="ps ps--inverse">
 <div class="row text-center">
-<div class="columns">
-<h2 class="smalltitle withlinea">Supported applications*</h2>
-<div class="row small-up-3 medium-up-3 applist">
-<div class="column">
-  <img src="{{root}}assets/img/apps/3dsMax_Logo.png" alt="3ds Max">
-  3ds Max
-</div>
-<div class="column">
-  <img src="{{root}}assets/img/apps/Vray_Logo.png" alt="V-Ray">
-  V-Ray
-</div>
-<div class="column">
-  <img src="{{root}}assets/img/apps/Corona_Logo.png" alt="V-Ray">
-  Corona
-</div>
-</div>
-<p data-magellan><small><em>*If you can’t find your preferred application here please <a href="#contact">contact us,</a> and we will try to find a solution.</em></small></p>
-</div>
+  <div class="columns large-10 large-centered">
+    <h2 class="smalltitle withlinea">Supported applications*</h2>
+    <div class="row small-up-3 medium-up-3 applist">
+      <div class="column">
+        <img src="{{root}}assets/img/apps/3dsMax.png" alt="3ds Max">
+        3ds Max
+      </div>
+      <div class="column">
+        <img src="{{root}}assets/img/apps/VRay.png" alt="V-Ray">
+        V-Ray
+      </div>
+      <div class="column">
+        <img src="{{root}}assets/img/apps/Corona.png" alt="V-Ray">
+        Corona
+      </div>
+    </div>
+    <p data-magellan><small><em>*If you can’t find your preferred application here please <a href="#contact">contact us,</a> and we will try to find a solution.</em></small></p>
+  </div>
 </div>
 </section>
 <section id="serverfeatures" class="ps">
 <div class="row">
-<div class="columns">
-<h2 class="ps__title withlinea seccol">Server Features</h2>
-<div class="row">
-<div class="columns large-7">
-  <div class="row">
-    <div class="columns medium-10 medium-centered large-12 large-uncentered">
-      <figure class="screenshot">
-        <img src="{{roots}}assets/img/screenshot-2.png" alt="Pulze Server Screenshot">
-        <figcaption>Some caption for the image above</figcaption>
-      </figure>
+  <div class="columns">
+    <h2 class="ps__title withlinea seccol">Server Features</h2>
+    <div class="row">
+      <div class="columns large-7">
+        <div class="row">
+          <div class="columns medium-10 medium-centered large-12 large-uncentered">
+            <figure class="screenshot">
+              <img src="{{roots}}assets/img/screen-server.png" alt="Pulze Server Screenshot">
+              <figcaption>Some caption for the image above</figcaption>
+            </figure>
+          </div>
+        </div>
+      </div>
+      <div class="columns large-5">
+        <div class="row small-up-1 medium-up-2 large-up-1">
+          <div class="column">
+            <div class="bullet">
+              <svg class="icon bullet__icon seccol"><use xlink:href="#icon-user" /></svg>
+              <h3 class="bullet__title seccol">Users</h3>
+              <p>In the Users section you are able to see the status of the users, create or edit their name and rank. You can choose between normal user or admin, which has a few extra privileges.</p>
+          </div>
+        </div>
+        <div class="column">
+          <div class="bullet">
+            <svg class="icon bullet__icon seccol"><use xlink:href="#icon-nodemonitor" /></svg>
+            <h3 class="bullet__title seccol">Nodes</h3>
+            <p>The node management on the server side has a few extra features. It lists all the connected nodes and workstations with their client version, username and current status. You can switch the selected workstations to node-mode remotely, enabling them to be used in a job. Another handy feature is to transfer any node or workstation to another running server which can save you a lot of time rather than doing it manually one by one.</p>
+        </div>
+      </div>
+      <div class="column">
+        <div class="bullet">
+          <svg class="icon bullet__icon seccol"><use xlink:href="#icon-rule" /></svg>
+          <h3 class="bullet__title seccol">Rules</h3>
+          <p>On the server side you can create and edit rules. It is possible to set the maximum number of nodes to be reserved and their timeout (that is the time that you have before and after your render). Once your timevalue expires, your job will be automatically deleted and the nodes will become free (only applies for Distributed jobs). You can also set a timeframe for your rules: for example you can have different rules for working hours Monday to Friday and for nights and weekends. Additionally, you can set a higher node count for peak-times in your office.</p>
+      </div>
     </div>
   </div>
-</div>
-<div class="columns large-5">
-  <div class="row small-up-1 medium-up-2 large-up-1">
-    <div class="column">
-      <div class="bullet">
-      <svg class="icon bullet__icon seccol"><use xlink:href="#icon-job" /></svg>
-      <h3 class="bullet__title seccol">Users</h3>
-      <p>In the Users section you are able to see the status of the users, create or edit their name and rank. You can choose between normal user or admin, which has a few extra privileges.</p>
-    </div>
-  </div>
-  <div class="column">
-    <div class="bullet">
-    <svg class="icon bullet__icon seccol"><use xlink:href="#icon-node" /></svg>
-    <h3 class="bullet__title seccol">Nodes</h3>
-    <p>The node management on the server side has a few extra features. It lists all the connected nodes and workstations with their client version, username and current status. You can switch the selected workstations to node-mode remotely, enabling them to be used in a job. Another handy feature is to transfer any node or workstation to another running server which can save you a lot of time rather than doing it manually one by one.</p>
-  </div>
-</div>
-<div class="column">
-  <div class="bullet">
-  <svg class="icon bullet__icon seccol"><use xlink:href="#icon-rule" /></svg>
-  <h3 class="bullet__title seccol">Rules</h3>
-  <p>On the server side you can create and edit rules. It is possible to set the maximum number of nodes to be reserved and their timeout (that is the time that you have before and after your render). Once your timevalue expires, your job will be automatically deleted and the nodes will become free (only applies for Distributed jobs). You can also set a timeframe for your rules: for example you can have different rules for working hours Monday to Friday and for nights and weekends. Additionally, you can set a higher node count for peak-times in your office.</p>
-</div>
-</div>
-</div>
 </div>
 </div>
 </div>

@@ -35,7 +35,7 @@ gulp.task('svgicons', function () {
   var svgs = gulp
         .src('src/assets/icons/*.svg')
         .pipe(rename({prefix: 'icon-'}))
-        //.pipe(svgmin())
+        .pipe(svgmin())
         .pipe(svgstore({ inlineSvg: true }));
 
   function fileContents (filePath, file) {

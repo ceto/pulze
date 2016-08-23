@@ -38,7 +38,7 @@
   @include breakpoint(large) {
     //width: 3rem;
     //height: 3rem;
-    margin-right: 1.5rem;
+    margin-right: 1.25rem;
   }
   &.seccol {
     fill: $secondary-color;
@@ -52,7 +52,7 @@
   font-weight: $global-weight-normal;
   line-height: 2.75rem;
   font-size: 1.125rem;
-  margin-bottom: 1.333rem;
+  margin-bottom: 1.125rem;
   @include breakpoint(large) {
     //line-height: 3.25rem;
   }

@@ -32,7 +32,7 @@
   position: absolute;
   padding:0 1.5rem;
   width:100%;
-  top:36%;
+  top:25%;
   transform: translateY(-50%);
 }
 .hero__title {
@@ -55,10 +55,18 @@
   letter-spacing: 0;
   line-height: 1;
   margin:0;
-  text-transform: uppercase;
-  font-size: 1.125rem;
+  font-size: 1rem;
   position: relative;
-  font-weight: 400;
+  font-weight: $global-weight-normal;
+  color:$white;
+  text-transform: none;
+  .icon {
+    //background-color: red;
+    fill:#fff;
+    width:2.5em;
+    height:.875em;
+    margin-left: .2em;
+  }
 }
 
 .hero__action {
@@ -67,7 +75,7 @@
   z-index: 2;
   padding:0 1.5rem;
   width:100%;
-  bottom:11%;
+  bottom:9%;
     p {
     margin: .5em 0 0;
     font-size: .875rem;

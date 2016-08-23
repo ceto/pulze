@@ -1,5 +1,8 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200">
-  <title>rule</title>
+  <title>jobcreate</title>
   <path class="circleframe" d="M100,200A100,100,0,1,1,200,100,100.11,100.11,0,0,1,100,200ZM100,6a94,94,0,1,0,94,94A94.14,94.14,0,0,0,100,6Z"/>
-  <polygon points="84.38 133.21 55.55 104.38 59.77 100.16 84.38 124.76 140.23 68.91 144.45 73.13 84.38 133.21"/>
+  <g>
+    <rect x="97.02" y="69.03" width="5.97" height="61.94"/>
+    <rect x="69.03" y="97.02" width="61.94" height="5.97"/>
+  </g>
 </svg>
