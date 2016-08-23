@@ -5,7 +5,7 @@
     <meta charset="utf-8" />
     <meta http-equiv="x-ua-compatible" content="ie=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Pulze - The Newest Node Manager</title>
+    <title>Pulze - developed by Brick</title>
     <link rel="stylesheet" href="assets/css/app.css">
     <link href="https://fonts.googleapis.com/css?family=Lato:300,400,700|Merriweather:400,400i,700" rel="stylesheet">
     <link rel="apple-touch-icon" sizes="180x180" href="assets/favicon/apple-touch-icon.png">
@@ -39,7 +39,7 @@
     <header class="hero">
       <div class="hero__text">
         <h1 class="hero__title">Welcome to Pulze</h1>
-        <h2 class="hero__subtitle">developed by <svg class="icon"><use xlink:href="#icon-bricklogo" /></svg></h2>
+        <h2 class="hero__subtitle">developed by <a href="http://brickvisual.com/" target="_blank"><svg class="icon"><use xlink:href="#icon-bricklogo" /></svg></a></h2>
       </div>
       <div class="hero__action" data-magellan data-threshold="0" data-bar-offset="0">
         <a href="signup.html" class="button">Sign Up</a>
@@ -49,7 +49,7 @@
     <section id="about" class="ps about" data-magellan-target="about">
       <div class="row">
         <div class="columns large-10 large-centered">
-          <h2 class="smalltitle withlinea">Manage your farm with its unique “Reserve n Render” approach</h2>
+          <h2 class="smalltitle withlinea">Manage your farm with Pulze's unique “Reserve n Render” approach</h2>
           <p>Pulze is an in-house development of Brick Visual. Due to the ever higher number of workstations and and thus the difficulty managing the render node distribution, we had to find a way to organise and control render jobs. After more than one year of testing it in production, it is now a core element of our pipeline. Because of its real necessity and efficiency, we decided to go public and share this tool with everybody having similar needs. If you are interested, and would like to try Pulze, please sign up for the beta test, and we will get in touch with you.</p>
           <p>Pulze is a render farm manager and monitor software. Its two main parts are the Client and the Server. Pulze’s main feature is its Reserve’n’Render approach which means that node demand can be scheduled, thus maximizing the capacity of the farm. Please check the Client and the Server features for more information.</p>
         </div>
@@ -68,7 +68,7 @@
                     <div class="columns medium-10 medium-centered large-12 large-uncentered" >
                       <figure class="screenshot">
                         <img src="assets/img/screen-client.png" alt="Pulze Client Screenshot">
-                        <figcaption>Some caption for the image above</figcaption>
+                        <figcaption>Pulze Client</figcaption>
                       </figure>
                     </div>
                   </div>
@@ -81,7 +81,7 @@
                   <div class="bullet">
                     <svg class="icon bullet__icon"><use xlink:href="#icon-nodevsws" /></svg>
                     <h3 class="bullet__title">Node vs Workstation</h3>
-                    <p>Pulze Client has two running modes. By default, it starts in ‘node mode’ which means that it can be reserved and used for jobs. Once you register or login with your username, you will be switched to ‘workstation mode’ where you can create jobs</p>
+                    <p>Pulze Client has two running modes. By default, it starts in ‘node mode’ which means that it can be reserved and used for jobs. Once you register or login with your username, you will be switched to ‘workstation mode’ where you can create jobs.</p>
                   </div>
                 </div>
                 <div class="column">
@@ -153,14 +153,18 @@
     <div class="row">
       <div class="columns">
         <h2 class="ps__title withlinea seccol">Server Features</h2>
-        <div class="row">
+        <div class="row" id="sfco">
           <div class="columns large-7">
-            <div class="row">
-              <div class="columns medium-10 medium-centered large-12 large-uncentered">
-                <figure class="screenshot">
-                  <img src="assets/img/screen-server.png" alt="Pulze Server Screenshot">
-                  <figcaption>Some caption for the image above</figcaption>
-                </figure>
+            <div  data-sticky-container>
+              <div class="sticky" data-sticky data-sticky-on="large" data-margin-top="4" data-top-anchor="sfco:top" data-btm-anchor="sfco:bottom">
+                <div class="row">
+                  <div class="columns medium-10 medium-centered large-12 large-uncentered">
+                    <figure class="screenshot">
+                      <img src="assets/img/screen-server.png" alt="Pulze Server Screenshot">
+                      <figcaption>Pulze Server</figcaption>
+                    </figure>
+                  </div>
+                </div>
               </div>
             </div>
           </div>
@@ -195,16 +199,16 @@
     </section>
     <hr>
     <section id="contact" class="contact ps text-center" data-magellan-target="contact">
-    <div class="row">
-    <div class="columns medium-10 large-10 medium-centered">
-    <h2 class="ps__title withlinea">Contact Us</h2>
-    <p>If you have any questions or comments, feel free to get in touch with us.</p>
-    <p>1016 Budapest, Perc u. 8. IV., Hungary</p>
-    <p class="ffsans"><a href="mailto:iinfo@pulze.io">info@pulze.io</a></p>
-    <p>&nbsp;</p>
-    <p><a href="signup.html" class="button">SIGN UP</a></p>
-    </div>
-    </div>
+      <div class="row">
+        <div class="columns medium-10 large-10 medium-centered">
+          <h2 class="ps__title withlinea">Contact Us</h2>
+          <p>If you have any questions or comments, feel free to get in touch with us.</p>
+          <p>1036 Budapest, Perc u. 8. IV., Hungary</p>
+          <p class="ffsans"><a href="mailto:info@pulze.io">info@pulze.io</a></p>
+          <p>&nbsp;</p>
+          <p><a href="signup.html" class="button">SIGN UP</a></p>
+        </div>
+      </div>
     </section>
     <footer class="sitefooter">
       <div class="row">
