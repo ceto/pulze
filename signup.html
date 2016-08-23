@@ -24,7 +24,7 @@
       </div>
       <div class="top-bar-right topbarfeat">
         <ul class="menu">
-          <li><a href="index.html" class="menu-text button button small">Back to home</a></li>
+          <li><a href="index.html" class="menu-text button button small"><span class="show-for-medium">Back to</span> home</a></li>
         </ul>
       </div>
     </div>
@@ -37,21 +37,21 @@
           <form id="signupform" class="signupform" action="assets/mailer.php" method="post" data-abide novalidate>
             <fieldset>
               <legend>Personal information</legend>
-              <div class="row">
-                <div class="columns smartlabelled">
+              <div class="row collapse">
+                <div class="columns xlarge-6 smartlabelled">
                   <input type="text" name="name" id="name" placeholder="Name" autocomplete="off" required />
                   <label for="name">Name</label>
                   <span class="form-error">Name is required</span>
                 </div>
-                <div class="columns smartlabelled">
+                <div class="columns xlarge-6 smartlabelled">
                   <input type="text" name="co_name" id="co_name" placeholder="Company name" autocomplete="off" />
                   <label for="co_name">Company name</label>
                 </div>
-                <div class="columns smartlabelled">
+                <div class="columns xlarge-6 smartlabelled">
                   <input type="text" name="web" id="web" placeholder="Website" autocomplete="off" />
                   <label for="web">Website</label>
                 </div>
-                <div class="columns smartlabelled">
+                <div class="columns xlarge-6 smartlabelled">
                   <input type="Email" name="email" id="email" placeholder="Email" pattern="email" autocomplete="off" required />
                   <label for="email">Email</label>
                   <span class="form-error">Email is required</span>
@@ -96,23 +96,31 @@
             </fieldset>
             <fieldset>
               <legend>Company information</legend>
-              <div class="row">
-                <div class="columns">
+              <div class="row collapse">
+                <div class="columns xlarge-6">
                   <label for="no_employees">Number of employees</label>
                   <select name="no_employees" id="no_employees">
                     <option value="Between 1 and 10">1-10</option>
-                    <option value="Between 11 and 30">11-30</option>
-                    <option value="Between 31 and 50">31-50</option>
-                    <option value="Over 50">Over 50</option>
+                    <option value="Between 11 and 20">11-20</option>
+                    <option value="Between 21 and 30">21-30</option>
+                    <option value="Between 31 and 40">31-40</option>
+                    <option value="Between 41 and 50">41-50</option>
+                    <option value="Between 51 and 75">51-75</option>
+                    <option value="Between 75 and 100">76-100</option>
+                    <option value="Over 100">Over 100</option>
                   </select>
                 </div>
-                <div class="columns">
+                <div class="columns xlarge-6">
                   <label for="no_wsrn">Number of workstations and render nodes</label>
                   <select name="no_wsrn" id="no_wsrn">
                     <option value="Between 1 and 10">1-10</option>
-                    <option value="Between 11 and 30">11-30</option>
-                    <option value="Between 31 and 50">31-50</option>
-                    <option value="Over 50">Over 50</option>
+                    <option value="Between 11 and 20">11-20</option>
+                    <option value="Between 21 and 30">21-30</option>
+                    <option value="Between 31 and 40">31-40</option>
+                    <option value="Between 41 and 50">41-50</option>
+                    <option value="Between 51 and 75">51-75</option>
+                    <option value="Between 76 and 100">76-100</option>
+                    <option value="Over 100">Over 100</option>
                   </select>
                 </div>
               </div>
@@ -203,6 +211,7 @@
                 </div>
               </div>
             </fieldset>
+            <br>
             <fieldset>
               <legend>Anything else we didn’t ask already, and you find important?</legend>
               <div class="row">
