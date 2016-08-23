@@ -3,22 +3,18 @@
   <div class="top-bar-title">
     <a class="sitelogo" href="index.html">Pulze</a>
   </div>
-  <div class="top-bar-right topbarfeat">
-    <ul class="menu">
-      <li><a href="signup.html" class="menu-text button button--ghost small">Sign Up</a></li>
-    </ul>
-  </div>
   <div id="responsive-menu" class="responsive-menu">
     <div class="top-bar-right">
       <ul class="menu menu--main" data-magellan data-threshold="0" data-bar-offset="0">
         <li><a href="#about">About</a></li>
         <li><a href="#features">Features</a></li>
         <li><a href="#contact">Contact</a></li>
+        <li><a href="{{roots}}signup.html">Sign Up</a></li>
       </ul>
     </div>
   </div>
   <span class="menutoggler" data-responsive-toggle="responsive-menu" data-hide-for="medium" >
-    <a href="#" data-toggle>Menu</a>
+    <a href="#" class="button tiny button--ghost" data-toggle>Menu</a>
   </span>
 </div>
 {{/unlesspage}}
@@ -29,7 +25,7 @@
   </div>
   <div class="top-bar-right topbarfeat">
     <ul class="menu">
-      <li><a href="index.html" class="menu-text button button small">Back to home</a></li>
+      <li><a href="index.html" class="menu-text button button small"><span class="show-for-medium">Back to</span> home</a></li>
     </ul>
   </div>
 </div>

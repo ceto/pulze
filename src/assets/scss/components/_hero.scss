@@ -32,7 +32,7 @@
   position: absolute;
   padding:0 1.5rem;
   width:100%;
-  top:25%;
+  top:26%;
   transform: translateY(-50%);
 }
 .hero__title {
@@ -66,6 +66,7 @@
     width:2.5em;
     height:.875em;
     margin-left: .2em;
+    transform:translateY(.0333em);
   }
 }
 

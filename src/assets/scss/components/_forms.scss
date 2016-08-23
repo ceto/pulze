@@ -1,8 +1,26 @@
 .signuppage {
   //border-top: 1px solid $medium-gray;
+  > .row {
+    max-width: 40em;
+    @include breakpoint('large') {
+      max-width: 78em;
+    }
+
+  }
 }
 .signupform {
   margin-top: 3.5rem;
+
+  .collapse {
+    @include breakpoint('xlarge') {
+      .columns:nth-child(2n+1) {
+        border-right: .75rem solid transparent;
+      }
+      .columns:nth-child(2n) {
+        border-left: .75rem solid transparent;
+      }
+    }
+  }
 }
 .smartlabelled {
   position: relative;
@@ -156,3 +174,4 @@ legend {
     //text-transform: uppercase;
   }
 }
+

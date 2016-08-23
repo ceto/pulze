@@ -71,7 +71,13 @@ html {
     border-color: $medium-gray;
   }
 }
-
+.about {
+  p {
+    @include breakpoint(large) {
+      text-align: justify;
+    }
+  }
+}
 
 .applist {
   font-family: $header-font-family;
