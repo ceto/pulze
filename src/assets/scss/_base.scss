@@ -36,6 +36,7 @@ figure {
   margin:0 0 $paragraph-margin-bottom * 3 ;
   text-align: center;
   &.screenshot {
+     //margin-top: 6vh;
 
     img {
       //border:2px solid $dark-gray;
@@ -47,9 +48,14 @@ figure {
       // margin-left:auto;
       // margin-right: auto;
     }
+    transition: margin-top .4s;
+    .is-stuck & {
+      //margin-top: 6vh;
+    }
   }
   figcaption {
-    font-size: .875rem;
+    font-size: .75rem;
+    font-style: italic;
 
     padding-top: 2em;
     line-height: 1.125;

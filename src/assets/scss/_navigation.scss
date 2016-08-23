@@ -89,7 +89,10 @@
     text-align: center;
     > a {
       color: $white;
-      &.active, &:hover {
+      &:hover {
+        color: $primary-color;
+      }
+      &.active {
         color: $primary-color;
       }
     }

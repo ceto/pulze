@@ -2,7 +2,7 @@
 
 
 .bullet {
-  margin: 0 0 2rem;
+  margin: 0 0 2.5rem;
 
   @include clearfix();
   @include clearfix();
@@ -18,25 +18,27 @@
     }
   }
   ul, p {
+    clear:both;
     font-size: .875rem;
 
-    @include breakpoint(large) {
-      margin-left: 7rem;
+
+    @include breakpoint(xlarge) {
+      text-align: justify;
     }
   }
 }
 .bullet__icon {
   float: left;
 
-  width: 4.25rem;
-  height: 4.25rem;
-  margin-right: .75rem;
+  width: 2.75rem;
+  height: 2.75rem;
+  margin-right: 1rem;
 
   fill: $primary-color;
   @include breakpoint(large) {
-    width: 4.75rem;
-    height: 4.75rem;
-    margin-right: 2.25rem;
+    //width: 3rem;
+    //height: 3rem;
+    margin-right: 1.5rem;
   }
   &.seccol {
     fill: $secondary-color;
@@ -45,12 +47,14 @@
 
 
 .bullet__title {
-  margin-top: -.25em;
-  //margin-bottom: 1rem;
+  //margin-top: -.25em;
   color: $primary-color;
-
+  font-weight: $global-weight-normal;
+  line-height: 2.75rem;
+  font-size: 1.125rem;
+  margin-bottom: 1.333rem;
   @include breakpoint(large) {
-    margin-left: 7rem;
+    //line-height: 3.25rem;
   }
   &.seccol {
     color: $secondary-color;
