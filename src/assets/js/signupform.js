@@ -35,7 +35,7 @@ $(document).on('formvalid.zf.abide', function(ev,frm) {
   var user_coname = $('input[name=co_name]').val();
   var user_web = $('input[name=web]').val();
   var user_noemployees = $('select[name=no_employees]').val();
-  var user_nowsrn = $('select[name=no_nowsrn]').val();
+  var user_nowsrn = $('select[name=no_wsrn]').val();
   var user_comment = $('textarea[name=comment]').val();
 
   var proceed = true;
